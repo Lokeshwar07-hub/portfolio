@@ -1,0 +1,1568 @@
+Build a premium, modern, responsive personal developer portfolio website for me.
+
+IMPORTANT:
+Use https://www.adityasaraswat.me/ ONLY as visual inspiration for the quality, spacing, typography, smoothness, animations, and overall developer-portfolio feel.
+
+DO NOT clone, copy, reproduce, or closely imitate that website.
+
+Create a completely ORIGINAL design, layout, visual identity, content structure, animations, and components.
+
+==================================================
+
+1. MY PROFILE
+   ==================================================
+
+Name:
+Lokeshwar Sikarwar
+
+Current Education:
+3rd-year B.Tech Computer Science student specializing in Data Science.
+
+Career Goal:
+Software Engineer / Full-Stack Web Developer.
+
+IMPORTANT:
+Although my degree specialization is Data Science, my portfolio should primarily position me as:
+
+Software Engineer
+Full-Stack Web Developer
+Problem Solver
+
+Do NOT make Data Science the primary identity of the portfolio.
+
+My current technical focus:
+
+* HTML
+* CSS
+* JavaScript
+* React.js
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* EJS
+* REST APIs
+* Git
+* GitHub
+* Java
+* Python
+* SQL
+* Data Structures & Algorithms
+
+I am also the:
+
+General Secretary
+IEEE Robotics & Automation Society (IEEE RAS)
+
+==================================================
+2. MY REAL LINKS
+================
+
+Use these actual links throughout the website.
+
+GitHub:
+https://github.com/Lokeshwar07-hub
+
+GitHub username:
+Lokeshwar07-hub
+
+LeetCode:
+https://leetcode.com/u/lokeshwarrrrr/
+
+LeetCode username:
+lokeshwarrrrr
+
+LinkedIn:
+https://www.linkedin.com/in/lokeshwar-sikarwar-a3084327a
+
+Email:
+[lokeshwarwork007@gmail.com](mailto:lokeshwarwork007@gmail.com)
+
+Resume:
+https://docs.google.com/document/d/1QbC3tmjJaWeIromKlsnb6Mo90npZuPst/edit?usp=sharing&ouid=107766465136797890552&rtpof=true&sd=true
+
+IMPORTANT:
+The Resume button should open the resume in a new browser tab.
+
+Keep all of these links centralized in:
+
+src/data/profile.js
+
+Example:
+
+export const profile = {
+name: "Lokeshwar Sikarwar",
+github: "https://github.com/Lokeshwar07-hub",
+githubUsername: "Lokeshwar07-hub",
+leetcode: "https://leetcode.com/u/lokeshwarrrrr/",
+leetcodeUsername: "lokeshwarrrrr",
+linkedin: "https://www.linkedin.com/in/lokeshwar-sikarwar-a3084327a",
+email: "[lokeshwarwork007@gmail.com](mailto:lokeshwarwork007@gmail.com)",
+resume: "https://docs.google.com/document/d/1QbC3tmjJaWeIromKlsnb6Mo90npZuPst/edit?usp=sharing&ouid=107766465136797890552&rtpof=true&sd=true"
+};
+
+Do not hardcode these links in multiple components.
+
+==================================================
+3. MAIN OBJECTIVE
+=================
+
+The portfolio should help recruiters understand me within 10 seconds.
+
+The website must clearly communicate:
+
+WHO I AM
+WHAT I BUILD
+WHAT I KNOW
+HOW I SOLVE PROBLEMS
+WHERE TO FIND MY CODE
+HOW TO CONTACT ME
+
+The portfolio should be suitable for:
+
+* Software Engineering internships
+* Full-Stack internships
+* Software development placements
+* Junior developer opportunities
+* Freelance/project opportunities
+
+It should NOT feel like:
+
+* A college assignment
+* A generic portfolio template
+* A Bootstrap portfolio
+* An AI-generated website
+* A resume converted into HTML
+
+==================================================
+4. TECH STACK
+=============
+
+Use:
+
+Frontend:
+
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+
+Libraries:
+
+* Framer Motion
+* Lucide React
+* React Router only if necessary
+
+Backend:
+
+* Node.js
+* Express.js
+
+Database:
+
+* MongoDB
+* Mongoose
+
+IMPORTANT:
+
+Do NOT use:
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* unnecessary UI libraries
+* unnecessary dependencies
+
+Keep the code simple, clean and understandable.
+
+I want to be able to maintain and modify the project myself.
+
+The portfolio should primarily work as a frontend application.
+
+Only use Node.js + Express + MongoDB when actually useful, such as:
+
+* contact form
+* secure API proxy
+* server-side external API requests
+
+==================================================
+5. DESIGN DIRECTION
+===================
+
+Create an original premium dark developer portfolio.
+
+Visual style:
+
+* Dark background
+* Off-white primary text
+* Muted gray secondary text
+* Subtle borders
+* One tasteful accent color
+* Large typography
+* Excellent whitespace
+* Subtle gradients
+* Minimal glass effects
+* Soft glow
+* Subtle background grid/noise
+* Smooth scrolling
+* Modern developer aesthetic
+
+Use a modern font such as:
+
+* Inter
+* Geist
+* Space Grotesk
+
+Use a strong typography hierarchy.
+
+Avoid excessive:
+
+* neon colors
+* gradients
+* glassmorphism
+* particles
+* 3D effects
+* huge animations
+
+The website should feel sophisticated, technical and personal.
+
+==================================================
+6. NAVIGATION
+=============
+
+Create a sticky/floating navigation bar.
+
+Logo:
+
+LS
+
+Navigation:
+
+Home
+About
+Projects
+GitHub
+DSA
+Experience
+Contact
+
+Also include:
+
+Resume
+
+Desktop:
+
+* horizontal navigation
+* subtle blur
+* transparent background
+* thin border
+* smooth scroll effect
+
+Mobile:
+
+* hamburger menu
+* animated menu
+* smooth open/close animation
+
+The navbar should become slightly more visible after scrolling.
+
+==================================================
+7. HERO SECTION
+===============
+
+Create a powerful first-screen hero.
+
+Eyebrow:
+
+"SOFTWARE ENGINEER • FULL-STACK WEB DEVELOPER"
+
+Main heading:
+
+"Building things for the web,
+one problem at a time."
+
+Supporting text:
+
+"I'm Lokeshwar — a Computer Science student focused on building clean, useful and scalable web applications while sharpening my problem-solving skills."
+
+Status indicator:
+
+"Open to internships & opportunities"
+
+Primary CTA:
+
+"View My Work"
+
+Secondary CTAs:
+
+"GitHub"
+"LeetCode"
+"Resume"
+
+Hero should contain a subtle original visual element such as:
+
+* animated gradient orb
+* code-inspired visual
+* subtle grid
+* floating developer card
+* terminal-style element
+
+Do NOT use a generic stock developer illustration.
+
+==================================================
+8. HERO ANIMATIONS
+==================
+
+Use Framer Motion.
+
+Add:
+
+* hero text entrance animation
+* button hover animation
+* subtle background movement
+* scroll indicator
+* subtle floating visual
+
+Animations must be:
+
+* smooth
+* fast
+* professional
+* not distracting
+
+Respect:
+
+prefers-reduced-motion
+
+==================================================
+9. ABOUT SECTION
+================
+
+Heading:
+
+"About Me"
+
+Use this as the base copy:
+
+"I'm a 3rd-year Computer Science student specializing in Data Science, but my main career focus is software engineering and full-stack web development.
+
+I enjoy turning ideas into working products and understanding how applications work from frontend to backend. I work primarily with React, JavaScript, Node.js, Express and MongoDB, while continuously improving my problem-solving skills through Data Structures & Algorithms.
+
+Alongside development, I'm the General Secretary of IEEE Robotics & Automation Society, where I contribute to technical activities, teamwork and student initiatives."
+
+Keep the writing natural.
+
+Do NOT make it sound AI-generated or overly corporate.
+
+Add quick-info cards:
+
+3rd Year B.Tech
+Full-Stack Development
+React + Node.js
+Java + DSA
+General Secretary — IEEE RAS
+
+==================================================
+10. TECH STACK
+==============
+
+Heading:
+
+"Things I Work With"
+
+Create clean interactive technology tags.
+
+Frontend:
+
+HTML
+CSS
+JavaScript
+React.js
+
+Backend:
+
+Node.js
+Express.js
+MongoDB
+Mongoose
+EJS
+
+Programming:
+
+Java
+Python
+SQL
+
+Tools:
+
+Git
+GitHub
+VS Code
+Postman
+
+Concepts:
+
+REST APIs
+CRUD
+Authentication
+Authorization
+Data Structures & Algorithms
+Responsive Design
+
+Do NOT use fake skill percentages.
+
+Do NOT use progress bars.
+
+Use clean pills/tags with subtle hover animations.
+
+==================================================
+11. PROJECTS
+============
+
+Heading:
+
+"Things I've Built"
+
+This should be one of the strongest sections of the portfolio.
+
+---
+
+## PROJECT 1
+
+Title:
+
+BilliBlogger
+
+GitHub:
+
+https://github.com/Lokeshwar07-hub/billi-blogger
+
+Description:
+
+"A full-stack blogging platform where users can create, edit and manage blog posts with authentication and authorization."
+
+Technologies:
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* EJS
+* JavaScript
+
+Features:
+
+* User authentication
+* Create blogs
+* Edit blogs
+* Delete blogs
+* Authorization
+* Cover images
+* Categories
+* Tags
+
+Button:
+
+"View on GitHub"
+
+Do NOT add a Live Demo button because no live URL has been provided.
+
+---
+
+## PROJECT 2
+
+Title:
+
+Goal Tracker Pro
+
+GitHub:
+
+https://github.com/Lokeshwar07-hub/goal-tracker-pro
+
+IMPORTANT:
+
+Use the actual GitHub repository information where possible to determine the technology stack, description and features.
+
+Do NOT invent features.
+
+If repository information is available, use actual:
+
+* description
+* technologies
+* features
+* repository information
+
+Button:
+
+"View on GitHub"
+
+Do NOT add a Live Demo button because no live URL has been provided.
+
+==================================================
+12. FUTURE PROJECT ARCHITECTURE
+===============================
+
+THIS IS VERY IMPORTANT.
+
+I want to add many more projects in the future.
+
+The project architecture must be scalable.
+
+Create:
+
+src/data/projects.js
+
+Use an array:
+
+[
+{
+id: 1,
+title: "BilliBlogger",
+description: "...",
+technologies: [],
+features: [],
+githubUrl: "...",
+liveUrl: "",
+image: "",
+featured: true,
+category: "Full Stack"
+}
+]
+
+The UI must automatically render projects from this data.
+
+I should be able to add:
+
+Project 3
+Project 4
+Project 5
+Project 10
+Project 20
+
+without modifying:
+
+* Projects.jsx
+* ProjectCard.jsx
+* App.jsx
+
+Only edit:
+
+src/data/projects.js
+
+when adding a project.
+
+Support unlimited future projects.
+
+If liveUrl is empty:
+
+Do NOT show a Live Demo button.
+
+If image is empty:
+
+Create an elegant HTML/CSS project preview.
+
+==================================================
+13. PROJECT FILTERING
+=====================
+
+Since I will add many projects later, make the Projects section scalable.
+
+Optionally support filters:
+
+All
+Featured
+React
+Node.js
+Full Stack
+
+Do not overcomplicate the first version.
+
+==================================================
+14. PROJECT CARD DESIGN
+=======================
+
+Project cards should look premium.
+
+Each card should contain:
+
+* project number
+* title
+* description
+* technologies
+* visual preview
+* GitHub link
+* Live Demo link only when available
+
+Desktop:
+
+Use an alternating/editorial layout instead of identical cards.
+
+Mobile:
+
+Stack vertically.
+
+Hover effects:
+
+* subtle card movement
+* border animation
+* image movement
+* arrow animation
+* accent transition
+
+Do not overanimate.
+
+==================================================
+15. PROJECT PREVIEWS
+====================
+
+Do NOT use random stock images.
+
+Create custom HTML/CSS project previews where practical.
+
+BilliBlogger preview:
+
+* browser window
+* blog navigation
+* blog cards
+* article preview
+
+Goal Tracker Pro preview:
+
+Create a dashboard-style visual based on the actual repository concept.
+
+Possible visual elements:
+
+* goals
+* progress
+* tracking cards
+* dashboard UI
+
+IMPORTANT:
+
+Do not visually claim features that don't actually exist in Goal Tracker Pro.
+
+==================================================
+16. GITHUB SECTION
+==================
+
+Create a dedicated section:
+
+"GitHub"
+
+Subheading:
+
+"Where I build, experiment and ship."
+
+GitHub profile:
+
+https://github.com/Lokeshwar07-hub
+
+Button:
+
+"View GitHub Profile →"
+
+==================================================
+17. LIVE GITHUB REPOSITORIES
+============================
+
+Display my GitHub repositories dynamically where technically possible.
+
+GitHub username:
+
+Lokeshwar07-hub
+
+Each repository card can show:
+
+* repository name
+* description
+* primary language
+* stars
+* forks
+* last updated
+* GitHub link
+
+Only display actual data.
+
+DO NOT create:
+
+* fake repositories
+* fake stars
+* fake forks
+* fake statistics
+
+If GitHub API retrieval is unavailable:
+
+Use a graceful fallback.
+
+Create:
+
+src/services/githubService.js
+
+for GitHub data retrieval.
+
+Create:
+
+src/data/github.js
+
+for configuration.
+
+==================================================
+18. LIVE GITHUB CONTRIBUTION GRAPH
+==================================
+
+Create:
+
+"Open Source & Contributions"
+
+Display my LIVE GitHub contribution activity where technically possible.
+
+GitHub:
+
+https://github.com/Lokeshwar07-hub
+
+Show:
+
+* contribution heatmap
+* contribution activity
+* total contributions if available
+* recent activity if available
+* streak if available
+
+The heatmap should update dynamically.
+
+DO NOT:
+
+* hardcode contributions
+* create fake contribution data
+* exaggerate statistics
+
+The visual design can be inspired by contribution heatmaps but should NOT copy GitHub's UI exactly.
+
+If live contribution data cannot be retrieved:
+
+Show:
+
+"View my GitHub activity →"
+
+with my GitHub profile link.
+
+==================================================
+19. GITHUB ACTIVITY
+===================
+
+If technically possible, show recent public activity such as:
+
+* commits
+* repository creation
+* pull requests
+* issues
+
+Only show publicly available real information.
+
+If unavailable, gracefully hide the activity feed.
+
+==================================================
+20. DSA / LEETCODE SECTION
+==========================
+
+Create a dedicated section:
+
+"DSA / Problem Solving"
+
+Subheading:
+
+"Building projects is one side of engineering. Solving problems is the other."
+
+Mention that I actively practice:
+
+* Arrays
+* Binary Search
+* Linked Lists
+* Stacks
+* Queues
+* Trees
+* Sorting
+* Recursion
+* Problem Solving
+
+==================================================
+21. LEETCODE PROFILE
+====================
+
+My LeetCode profile:
+
+https://leetcode.com/u/lokeshwarrrrr/
+
+Username:
+
+lokeshwarrrrr
+
+Create:
+
+"View LeetCode Profile →"
+
+This should open my actual profile.
+
+==================================================
+22. LIVE LEETCODE STATISTICS
+============================
+
+Retrieve real LeetCode statistics where technically possible.
+
+Potential statistics:
+
+* Total solved
+* Easy
+* Medium
+* Hard
+* Contest rating
+* Ranking
+* Acceptance rate
+
+IMPORTANT:
+
+Only show statistics that are actually retrieved.
+
+DO NOT invent:
+
+* solved counts
+* ratings
+* rankings
+* streaks
+
+If live data is unavailable:
+
+Show:
+
+"View my latest LeetCode progress →"
+
+==================================================
+23. RECENT LEETCODE PROBLEMS
+============================
+
+Create:
+
+"Recent Problems"
+
+Show my recently solved LeetCode problems dynamically where technically possible.
+
+Each card should contain:
+
+* problem number
+* title
+* difficulty
+* topics
+* date solved if available
+* LeetCode URL
+* solution URL if available
+
+Do NOT create fake recent problems.
+
+If live retrieval is unavailable:
+
+Create:
+
+src/data/leetcode.js
+
+so I can manually configure problems.
+
+==================================================
+24. LEETCODE DASHBOARD
+======================
+
+Create a premium DSA dashboard.
+
+Display:
+
+Total Solved
+Easy
+Medium
+Hard
+
+Then:
+
+Recent Problems
+
+Use clean statistics cards and difficulty badges.
+
+Do not use exaggerated progress bars.
+
+==================================================
+25. CODE. BUILD. SOLVE.
+=======================
+
+Create a visually strong section:
+
+"Code. Build. Solve."
+
+Three concepts:
+
+BUILD
+
+"I build real-world web applications."
+
+SOLVE
+
+"I practice Data Structures & Algorithms."
+
+LEARN
+
+"I continuously improve my software engineering skills."
+
+Use subtle animated cards.
+
+==================================================
+26. EXPERIENCE / JOURNEY
+========================
+
+Heading:
+
+"My Journey"
+
+Create a clean vertical timeline.
+
+Entry:
+
+B.Tech Computer Science
+
+2024 - Present
+
+"Currently pursuing B.Tech in Computer Science with a specialization in Data Science."
+
+Entry:
+
+General Secretary
+IEEE Robotics & Automation Society
+
+"Leading and contributing to technical activities, student initiatives, teamwork and organizational responsibilities within IEEE RAS."
+
+IMPORTANT:
+
+Do not invent additional companies, internships, achievements or responsibilities.
+
+==================================================
+27. CURRENTLY LEARNING
+======================
+
+Create:
+
+"Currently Learning"
+
+Main:
+
+Data Structures & Algorithms
+
+Also include:
+
+* Backend Development
+* Software Engineering
+* React
+* Node.js
+* System Design Fundamentals
+
+Keep it simple and visually interesting.
+
+==================================================
+28. CONTACT
+===========
+
+Heading:
+
+"Let's Build Something"
+
+Text:
+
+"Have an opportunity, project idea, or just want to talk tech? Feel free to reach out."
+
+Contact information:
+
+Email:
+
+[lokeshwarwork007@gmail.com](mailto:lokeshwarwork007@gmail.com)
+
+Buttons:
+
+"Email Me"
+"LinkedIn"
+"GitHub"
+"LeetCode"
+
+Contact form:
+
+Name
+Email
+Message
+
+Button:
+
+"Send Message"
+
+Implement frontend validation.
+
+If backend is implemented:
+
+Use:
+
+Node.js
+Express.js
+MongoDB
+
+Never expose database credentials.
+
+==================================================
+29. SOCIAL LINKS
+================
+
+GitHub:
+
+https://github.com/Lokeshwar07-hub
+
+LeetCode:
+
+https://leetcode.com/u/lokeshwarrrrr/
+
+LinkedIn:
+
+https://www.linkedin.com/in/lokeshwar-sikarwar-a3084327a
+
+Email:
+
+mailto:lokeshwarwork007@gmail.com
+
+Resume:
+
+https://docs.google.com/document/d/1QbC3tmjJaWeIromKlsnb6Mo90npZuPst/edit?usp=sharing&ouid=107766465136797890552&rtpof=true&sd=true
+
+==================================================
+30. RESUME
+==========
+
+Add Resume buttons in:
+
+* Navbar
+* Hero
+* Contact
+
+The Resume button should open the Google Docs resume in a new tab.
+
+Use the centralized profile configuration.
+
+If the resume link ever changes, I should only need to update:
+
+src/data/profile.js
+
+==================================================
+31. FOOTER
+==========
+
+Footer:
+
+Lokeshwar Sikarwar
+
+"Built with React & curiosity."
+
+Links:
+
+GitHub
+LinkedIn
+LeetCode
+Email
+Resume
+
+Copyright:
+
+© 2026 Lokeshwar Sikarwar
+
+Keep it minimal.
+
+==================================================
+32. RESPONSIVE DESIGN
+=====================
+
+Perfectly support:
+
+320px
+375px
+768px
+1024px
+1440px
+
+Requirements:
+
+* no horizontal scrolling
+* responsive typography
+* responsive project layouts
+* responsive GitHub heatmap
+* responsive LeetCode dashboard
+* mobile navigation
+* accessible buttons
+* proper spacing
+
+==================================================
+33. ACCESSIBILITY
+=================
+
+Use:
+
+* semantic HTML
+* correct heading hierarchy
+* alt text
+* keyboard navigation
+* visible focus states
+* accessible buttons
+* aria-labels
+* sufficient contrast
+* reduced-motion support
+
+==================================================
+34. PERFORMANCE
+===============
+
+Keep the website fast.
+
+Avoid:
+
+* huge videos
+* heavy particle libraries
+* unnecessary dependencies
+* excessive animation
+* unnecessary API requests
+
+Use:
+
+* lazy loading
+* efficient React rendering
+* caching where appropriate
+* optimized assets
+
+==================================================
+35. LIVE DATA ARCHITECTURE
+==========================
+
+Keep external API logic separate from UI.
+
+Recommended:
+
+src/
+components/
+Navbar.jsx
+Hero.jsx
+About.jsx
+Skills.jsx
+Projects.jsx
+ProjectCard.jsx
+GitHub.jsx
+GitHubRepos.jsx
+GitHubContributions.jsx
+GitHubActivity.jsx
+LeetCode.jsx
+LeetCodeStats.jsx
+LeetCodeProblems.jsx
+Experience.jsx
+Learning.jsx
+Contact.jsx
+Footer.jsx
+
+services/
+githubService.js
+leetcodeService.js
+
+data/
+profile.js
+projects.js
+github.js
+leetcode.js
+skills.js
+experience.js
+
+styles/
+global.css
+variables.css
+
+Do not put API calls directly inside huge UI components.
+
+==================================================
+36. LOADING STATES
+==================
+
+GitHub:
+
+"Loading GitHub activity..."
+
+LeetCode:
+
+"Loading LeetCode stats..."
+
+Use elegant skeleton loaders.
+
+==================================================
+37. ERROR HANDLING
+==================
+
+If GitHub or LeetCode data cannot be loaded:
+
+DO NOT break the page.
+
+Show:
+
+"Live activity is temporarily unavailable."
+
+Then provide the relevant profile link.
+
+The rest of the portfolio must continue working.
+
+==================================================
+38. SECURITY
+============
+
+Never expose:
+
+* API keys
+* secrets
+* database credentials
+* private tokens
+
+in frontend code.
+
+If an API requires authentication:
+
+Use a secure backend endpoint.
+
+Use environment variables.
+
+Never commit secrets to GitHub.
+
+==================================================
+39. SEO
+=======
+
+Page title:
+
+"Lokeshwar Sikarwar | Software Engineer & Full-Stack Developer"
+
+Meta description:
+
+"Portfolio of Lokeshwar Sikarwar, a Computer Science student and aspiring Software Engineer / Full-Stack Web Developer building applications with React, Node.js, Express and MongoDB."
+
+Add:
+
+* Open Graph metadata
+* favicon
+* semantic headings
+* descriptive links
+
+==================================================
+40. CUSTOM CURSOR
+=================
+
+Optionally implement a subtle custom cursor on desktop.
+
+Do NOT make it oversized or distracting.
+
+Disable on:
+
+* mobile
+* touch devices
+
+==================================================
+41. SCROLL EXPERIENCE
+=====================
+
+Add:
+
+* smooth scrolling
+* active navigation indicator
+* section reveal animations
+* subtle navbar transition
+* project hover effects
+* GitHub interactions
+* LeetCode interactions
+
+Keep everything subtle and professional.
+
+==================================================
+42. CONTENT RULES
+=================
+
+NEVER invent:
+
+* internships
+* companies
+* job experience
+* salary
+* awards
+* fake achievements
+* fake GitHub stars
+* fake GitHub contributions
+* fake LeetCode statistics
+* fake LeetCode problems
+* fake project users
+* fake project metrics
+* fake ratings
+* fake testimonials
+
+Use only real information.
+
+If information is unavailable:
+
+Use a clean placeholder or hide the element.
+
+==================================================
+43. FUTURE-PROOF PROJECT SYSTEM
+===============================
+
+THIS IS VERY IMPORTANT.
+
+I plan to continuously add projects to this portfolio.
+
+The portfolio must be designed around a scalable project data system.
+
+I should be able to add:
+
+Project 3
+Project 4
+Project 5
+Project 10
+Project 20
+
+without modifying UI components.
+
+Only update:
+
+src/data/projects.js
+
+The UI should automatically render the new projects.
+
+Support:
+
+* GitHub URL
+* Live URL
+* Technologies
+* Description
+* Features
+* Project image/preview
+* Featured status
+* Optional category
+* Optional date
+
+If a field is missing, gracefully handle it.
+
+==================================================
+44. FINAL HOMEPAGE STRUCTURE
+============================
+
+Use this order:
+
+1. Navbar
+
+2. Hero
+
+   * Name
+   * Software Engineer / Full-Stack Developer
+   * CTA buttons
+
+3. About
+
+4. Tech Stack
+
+5. Featured Projects
+
+6. GitHub
+
+   * Profile
+   * Repositories
+   * Contributions
+   * Activity
+
+7. DSA / LeetCode
+
+   * Profile
+   * Statistics
+   * Recent Problems
+
+8. Code. Build. Solve.
+
+9. Experience / Journey
+
+10. Currently Learning
+
+11. Contact
+
+12. Footer
+
+==================================================
+45. VISUAL QUALITY
+==================
+
+The final result should look like a professional developer portfolio suitable for:
+
+* internships
+* software engineering placements
+* full-stack opportunities
+
+It should feel:
+
+* Personal
+* Modern
+* Premium
+* Minimal
+* Technical
+* Fast
+* Confident
+
+It should NOT feel:
+
+* Generic
+* Overdesigned
+* Template-based
+* Like a college assignment
+* Like an AI-generated website
+
+==================================================
+46. DEVELOPMENT PROCESS
+=======================
+
+IMPORTANT:
+
+DO NOT immediately start coding.
+
+FIRST create a detailed implementation plan.
+
+Show:
+
+1. Design architecture
+2. Component architecture
+3. File structure
+4. Data architecture
+5. GitHub integration strategy
+6. LeetCode integration strategy
+7. Future project architecture
+8. Animation strategy
+9. Responsive strategy
+10. Security strategy
+11. Implementation phases
+
+After the plan is approved, implement the website.
+
+Build in phases:
+
+PHASE 1:
+Project setup
+Global styles
+Design system
+Navigation
+Hero
+
+PHASE 2:
+About
+Skills
+Projects
+Future project architecture
+
+PHASE 3:
+GitHub integration
+Repositories
+Contribution graph
+Activity
+
+PHASE 4:
+LeetCode integration
+Statistics
+Recent problems
+
+PHASE 5:
+Experience
+Currently Learning
+Contact
+Footer
+
+PHASE 6:
+Animations
+Responsive polish
+Accessibility
+SEO
+
+PHASE 7:
+Performance optimization
+
+PHASE 8:
+Testing and bug fixing
+
+==================================================
+47. FINAL TESTING
+=================
+
+Before declaring the project complete:
+
+1. Run the application.
+2. Check every navigation link.
+3. Check mobile navigation.
+4. Check every button.
+5. Check GitHub profile.
+6. Check LinkedIn.
+7. Check LeetCode profile.
+8. Check Resume.
+9. Check project GitHub links.
+10. Check project rendering from projects.js.
+11. Add a test project to projects.js and verify it automatically appears.
+12. Test GitHub repository loading.
+13. Test GitHub contribution loading.
+14. Test LeetCode data loading.
+15. Test LeetCode fallback states.
+16. Test contact form validation.
+17. Check 320px width.
+18. Check 375px width.
+19. Check tablet.
+20. Check desktop.
+21. Check for horizontal overflow.
+22. Check browser console for errors.
+23. Check accessibility.
+24. Check animations.
+25. Check page performance.
+26. Check SEO metadata.
+27. Check that no fake data is displayed.
+28. Check all real links.
+29. Check that adding future projects requires editing only projects.js.
+
+Fix all obvious issues before finishing.
+
+==================================================
+48. FINAL INSTRUCTION
+=====================
+
+Build this as a REAL portfolio that I can deploy and use for software engineering internships and placements.
+
+Prioritize:
+
+1. Strong first impression
+2. Excellent project presentation
+3. Real GitHub integration
+4. Real GitHub contribution activity
+5. Real/accurate LeetCode integration
+6. Scalable project architecture
+7. Clean code
+8. Responsive design
+9. Performance
+10. Accessibility
+11. Easy customization
+
+The website must be original.
+
+Use the reference website only for general inspiration regarding quality and modern developer-portfolio aesthetics.
+
+DO NOT copy:
+
+* its layout
+* its text
+* its components
+* its visual identity
+* its animations
+* its exact design
+
+Create a unique visual identity for Lokeshwar Sikarwar.
+
+The final website should make a recruiter immediately understand:
+
+"Lokeshwar is a developer who BUILDS projects, SOLVES DSA problems, and is actively growing as a SOFTWARE ENGINEER."
+
+Do not start coding until you have shown the implementation plan.
