@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Lokeshwar Sikarwar Portfolio"
+description = "A premium, original developer portfolio for Lokeshwar Sikarwar, highlighting software engineering work, full-stack projects, GitHub activity, and DSA practice."
+version = "1.0.0"
+id = "artifacts/lokeshwar-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23409
+
+[services.development]
+run = "pnpm --filter @workspace/lokeshwar-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/lokeshwar-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/lokeshwar-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23409"
+BASE_PATH = "/"

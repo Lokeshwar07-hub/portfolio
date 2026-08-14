@@ -10,6 +10,10 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: github
+    description: Public GitHub profile data
+  - name: leetcode
+    description: Public LeetCode profile data
 paths:
   /healthz:
     get:
@@ -24,6 +28,107 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /github/repos:
+    get:
+      operationId: getGithubRepos
+      tags: [github]
+      summary: Get public repositories
+      description: Returns public repositories for a configured GitHub profile.
+      responses:
+        "200":
+          description: Public repository list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GithubRepository"
+        "503":
+          description: GitHub data unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnavailableResponse"
+  /github/activity:
+    get:
+      operationId: getGithubActivity
+      tags: [github]
+      summary: Get recent public activity
+      description: Returns recent public activity for a configured GitHub profile.
+      responses:
+        "200":
+          description: Recent public activity
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GithubActivity"
+        "503":
+          description: GitHub activity unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnavailableResponse"
+  /github/contributions:
+    get:
+      operationId: getGithubContributions
+      tags: [github]
+      summary: Get contribution activity
+      description: Returns a contribution calendar when a public source is available.
+      responses:
+        "200":
+          description: Contribution calendar
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GithubContributions"
+        "503":
+          description: Contribution data unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnavailableResponse"
+  /leetcode/profile:
+    get:
+      operationId: getLeetcodeProfile
+      tags: [leetcode]
+      summary: Get public LeetCode profile statistics
+      description: Returns only statistics that can be retrieved from public data.
+      responses:
+        "200":
+          description: Public profile statistics
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LeetcodeProfile"
+        "503":
+          description: LeetCode profile unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnavailableResponse"
+  /leetcode/recent:
+    get:
+      operationId: getLeetcodeRecent
+      tags: [leetcode]
+      summary: Get recent solved problems
+      description: Returns recent problems only when real public data is available.
+      responses:
+        "200":
+          description: Recent solved problems
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/LeetcodeProblem"
+        "503":
+          description: LeetCode problem data unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UnavailableResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +138,152 @@ components:
           type: string
       required:
         - status
+    UnavailableResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+      required:
+        - error
+        - message
+    GithubRepository:
+      type: object
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        description:
+          type: ["string", "null"]
+        htmlUrl:
+          type: string
+        language:
+          type: ["string", "null"]
+        stars:
+          type: number
+        forks:
+          type: number
+        updatedAt:
+          type: string
+        topics:
+          type: array
+          items:
+            type: string
+      required:
+        - id
+        - name
+        - description
+        - htmlUrl
+        - language
+        - stars
+        - forks
+        - updatedAt
+        - topics
+    GithubActivity:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        repoName:
+          type: string
+        repoUrl:
+          type: string
+        createdAt:
+          type: string
+        summary:
+          type: string
+      required:
+        - id
+        - type
+        - repoName
+        - repoUrl
+        - createdAt
+        - summary
+    GithubContributionDay:
+      type: object
+      properties:
+        date:
+          type: string
+        count:
+          type: number
+        level:
+          type: number
+      required:
+        - date
+        - count
+        - level
+    GithubContributions:
+      type: object
+      properties:
+        total:
+          type: number
+        days:
+          type: array
+          items:
+            $ref: "#/components/schemas/GithubContributionDay"
+      required:
+        - total
+        - days
+    LeetcodeProfile:
+      type: object
+      properties:
+        username:
+          type: string
+        totalSolved:
+          type: ["number", "null"]
+        easySolved:
+          type: ["number", "null"]
+        mediumSolved:
+          type: ["number", "null"]
+        hardSolved:
+          type: ["number", "null"]
+        contestRating:
+          type: ["number", "null"]
+        ranking:
+          type: ["number", "null"]
+        acceptanceRate:
+          type: ["number", "null"]
+      required:
+        - username
+        - totalSolved
+        - easySolved
+        - mediumSolved
+        - hardSolved
+        - contestRating
+        - ranking
+        - acceptanceRate
+    LeetcodeProblem:
+      type: object
+      properties:
+        id:
+          type: string
+        number:
+          type: ["number", "null"]
+        title:
+          type: string
+        difficulty:
+          type: ["string", "null"]
+        topics:
+          type: array
+          items:
+            type: string
+        solvedAt:
+          type: ["string", "null"]
+        url:
+          type: string
+        solutionUrl:
+          type: ["string", "null"]
+      required:
+        - id
+        - number
+        - title
+        - difficulty
+        - topics
+        - solvedAt
+        - url
+        - solutionUrl
 
