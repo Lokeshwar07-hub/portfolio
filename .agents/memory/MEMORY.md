@@ -1,0 +1,1 @@
+- [Vite deployment defaults](vite-deployment-defaults.md) — keep Replit-only env vars and plugins optional during production builds.
