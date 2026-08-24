@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import app from "../../../artifacts/api-server/src/app";
+import app from "../../../artifacts/api-server/src/app.js";
 
 /**
  * Vercel invokes catch-all functions with either the full `/api/...` path or

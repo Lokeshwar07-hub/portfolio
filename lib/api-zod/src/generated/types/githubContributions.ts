@@ -5,7 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-import type { GithubContributionDay } from './githubContributionDay';
+import type { GithubContributionDay } from './githubContributionDay.js';
 
 export interface GithubContributions {
   total: number;

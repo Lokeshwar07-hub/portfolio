@@ -6,11 +6,11 @@
  * OpenAPI spec version: 0.1.0
  */
 
-export * from './githubActivity';
-export * from './githubContributionDay';
-export * from './githubContributions';
-export * from './githubRepository';
-export * from './healthStatus';
-export * from './leetcodeProblem';
-export * from './leetcodeProfile';
-export * from './unavailableResponse';
+export * from './githubActivity.js';
+export * from './githubContributionDay.js';
+export * from './githubContributions.js';
+export * from './githubRepository.js';
+export * from './healthStatus.js';
+export * from './leetcodeProblem.js';
+export * from './leetcodeProfile.js';
+export * from './unavailableResponse.js';

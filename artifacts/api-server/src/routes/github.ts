@@ -4,7 +4,7 @@ import {
   GetGithubContributionsResponse,
   GetGithubReposResponse,
 } from "@workspace/api-zod";
-import { fetchJson, withCache } from "../lib/public-api";
+import { fetchJson, withCache } from "../lib/public-api.js";
 
 const router: IRouter = Router();
 const username = "Lokeshwar07-hub";

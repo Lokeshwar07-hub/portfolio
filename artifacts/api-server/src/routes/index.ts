@@ -1,7 +1,7 @@
 import { Router, type IRouter } from "express";
-import healthRouter from "./health";
-import githubRouter from "./github";
-import leetcodeRouter from "./leetcode";
+import healthRouter from "./health.js";
+import githubRouter from "./github.js";
+import leetcodeRouter from "./leetcode.js";
 
 const router: IRouter = Router();
 

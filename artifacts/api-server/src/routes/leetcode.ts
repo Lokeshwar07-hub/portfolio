@@ -3,7 +3,7 @@ import {
   GetLeetcodeProfileResponse,
   GetLeetcodeRecentResponse,
 } from "@workspace/api-zod";
-import { fetchJson, withCache } from "../lib/public-api";
+import { fetchJson, withCache } from "../lib/public-api.js";
 
 const router: IRouter = Router();
 const username = "lokeshwarrrrr";
