@@ -9,6 +9,7 @@
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "moduleResolution": "bundler",
+    "rootDir": "../..",
     "types": ["node", "vite/client"],
     "paths": {
       "@/*": ["./src/*"]
