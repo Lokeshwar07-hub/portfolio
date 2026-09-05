@@ -7,7 +7,6 @@
     "jsx": "preserve",
     "lib": ["esnext", "dom", "dom.iterable"],
     "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
     "moduleResolution": "bundler",
     "rootDir": "../..",
     "types": ["node", "vite/client"],
