@@ -26,7 +26,7 @@ export default function ProjectsSection() {
                     <div className="flex flex-col gap-y-3 items-center justify-center">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Check out my latest work</h2>
                         <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-                            From autonomous AI agents to RAG pipelines and forecasting systems,
+                            Building things for the web, solving problems, and turning ideas into reality.,
                             here&apos;s what I&apos;ve been building.
                         </p>
                     </div>

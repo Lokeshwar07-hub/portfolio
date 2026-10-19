@@ -6,32 +6,32 @@ import { DATA } from "@/data/resume";
 
 type Unit = { c?: string[]; f: string; link?: boolean };
 
+
 const UNITS: Unit[] = [
   { c: ["hey", "yo", "hi"], f: "Want" },
   { f: "to" },
-  { f: "chat?" },
-  { c: ["send", "ping", "shoot"], f: "Shoot" },
-  { f: "me" },
-  { f: "a" },
-  { f: "specific" },
-  { f: "question" },
-  { f: "as" },
-  { f: "a" },
-  { c: ["message", "note", "dm"], f: "DM" },
+  { f: "collaborate" },
   { f: "on" },
-  { c: ["X", "Twitter"], f: "Twitter", link: true },
+  { f: "a" },
+  { f: "project," },
+  { f: "discuss" },
+  { f: "an" },
+  { f: "idea," },
+  { f: "or" },
+  { f: "just" },
+  { f: "talk" },
+  { f: "tech?" },
+  { c: ["Reach", "Connect", "Message"], f: "Reach" },
+  { f: "out" },
+  { f: "on" },
+  { c: ["LinkedIn", "my profile"], f: "LinkedIn", link: true },
   { f: "—" },
-  { f: "I" },
-  { c: ["read", "see", "get"], f: "read" },
-  { f: "every" },
-  { f: "one" },
-  { f: "myself" },
-  { f: "and" },
-  { c: ["reply", "respond", "answer"], f: "reply" },
-  { f: "when" },
-  { f: "I" },
-  { f: "can." },
+  { f: "I'd" },
+  { f: "love" },
+  { f: "to" },
+  { f: "connect!" },
 ];
+
 
 const FLICKER_COUNT = 5;
 const FLICKER_DELAY = 70;
@@ -52,7 +52,7 @@ export default function ContactConsole() {
 
   const reducedMotion = useRef(false);
   const cancelledRef = useRef(false);
-  const twitterUrl = DATA.contact.social.X.url;
+  const linkedinUrl = DATA.contact.social.LinkedIn.url;
 
   function runGeneration() {
     cancelledRef.current = true;
@@ -161,7 +161,7 @@ export default function ContactConsole() {
               <span className={`h-2 w-2 rounded-full transition-colors duration-300 ${!generating && !done ? dotMuted : dotAmber}`} />
               <span className={`h-2 w-2 rounded-full transition-all duration-300 ${dotGreen}`} />
             </div>
-            <span>yash · reachable-v1</span>
+            <span>lokeshwar · contact-v1</span>
             {(generating || done) && startTime && (
               <span className="tabular-nums text-muted-foreground/50">
                 · {latency}ms
@@ -178,7 +178,7 @@ export default function ContactConsole() {
         <div className="px-5 py-6 text-[15px] leading-relaxed text-foreground">
           <div className="mb-3 text-xs text-muted-foreground">
             <span className="text-foreground">&gt;</span>{" "}
-            reach(intent=&quot;ask something specific&quot;)
+            reach(intent=&quot;let's build something&quot;)
           </div>
 
           <div className="text-pretty">
@@ -186,7 +186,7 @@ export default function ContactConsole() {
               u.link ? (
                 <motion.a
                   key={idx}
-                  href={twitterUrl}
+                  href={linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold text-sky-500 underline decoration-sky-500/40 underline-offset-4 transition-colors duration-300 hover:text-sky-400"
@@ -246,7 +246,10 @@ export default function ContactConsole() {
       </div>
 
       <p className="text-balance text-[11.5px] font-mono text-muted-foreground">
-        solicitation, cold pitches, &quot;quick calls&quot; →{" "}
+        
+          I prefer thoughtful messages about projects, collaboration, and
+          meaningful opportunities. Please include a little context when reaching out.
+        
         <span className="text-foreground/70">auto-dropped</span>, not read.
       </p>
     </div>

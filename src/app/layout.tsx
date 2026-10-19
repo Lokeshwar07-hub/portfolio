@@ -20,7 +20,7 @@ const SITE_URL = "https://yashmaheshwari.is-a.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Yash Maheshwari | AI/ML Engineer — Agentic AI, RAG & Backend",
+    default: "Lokeshwar Sikarwar | Software Developer — Fullstack , Backend",
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,

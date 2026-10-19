@@ -63,7 +63,7 @@ export default async function Page() {
             <HeroItem className="flex flex-col sm:flex-row items-center gap-3 pt-1">
               <Magnetic>
                 <Button
-                  data-cal-link="yash-maheshwari-qklkhu/30min"
+                  data-cal-link="lokeshwar-sikarwar-qke2x0/30min"
                   data-cal-config={JSON.stringify({ layout: "month_view" })}
                   className="gap-2 h-11 rounded-xl text-sm font-medium px-6 w-full sm:w-auto shadow-[0_0_24px_-6px] shadow-primary/40"
                 >
@@ -121,11 +121,11 @@ export default async function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="open-source" className="pt-4">
+      {/* <section id="open-source" className="pt-4">
         <BlurFade inView>
           <OpenSourceSection />
         </BlurFade>
-      </section>
+      </section> */}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade inView>
@@ -221,37 +221,6 @@ export default async function Page() {
         </BlurFade>
       </section>
 
-      <section id="writing">
-        <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade inView>
-            <h2 className="text-xl font-bold tracking-tight">Latest Writing</h2>
-          </BlurFade>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {latestPosts.map((post, idx) => {
-              const slug = post._meta.path.replace(/\.mdx$/, "");
-              return (
-                <BlurFade key={slug} inView delay={idx * 0.05}>
-                  <BlogCard
-                    title={post.title}
-                    summary={post.summary}
-                    readTime={post.readTime}
-                    slug={slug}
-                    className="h-full"
-                  />
-                </BlurFade>
-              );
-            })}
-          </div>
-          <BlurFade inView delay={0.08}>
-            <Link
-              href="/blog"
-              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              View all posts <ArrowUpRight className="ml-1 size-3.5" />
-            </Link>
-          </BlurFade>
-        </div>
-      </section>
 
       <footer className="mt-6 border-t border-border/60 pt-10 pb-24 md:pb-10">
         <div className="flex flex-col items-center gap-5 text-center">

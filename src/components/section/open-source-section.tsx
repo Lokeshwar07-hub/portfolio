@@ -34,30 +34,22 @@ function formatMergedAt(value?: string) {
 export default function OpenSourceSection() {
   const [expanded, setExpanded] = useState<string | null>(null);
 
-  const manualLogos = useMemo(() => {
-    const logos: Record<string, string> = {};
-    for (const repo of DATA.openSource) {
-      logos[repo.fullName] = repo.logoUrl;
-    }
-    return logos;
-  }, []);
-
+  // const manualLogos = useMemo(() => {
+  //   const logos: Record<string, string> = {};
+  //   for (const repo of DATA.openSource) {
+  //     logos[repo.fullName] = repo.logoUrl;
+  //   }
+  //   return logos;
+  // }, []);
+  const manualLogos: Record<string, string> = {};
   const repositories: OpenSourceRepo[] = useMemo(() => {
     const fromGitHub = githubStats.openSource;
+
     if (Array.isArray(fromGitHub) && fromGitHub.length > 0) {
       return fromGitHub as OpenSourceRepo[];
     }
 
-    // Fallback to the hand-maintained list when the snapshot has no data yet.
-    return DATA.openSource
-      .map((repo) => ({
-        repo: repo.repo,
-        fullName: repo.fullName,
-        url: repo.url,
-        stars: 0,
-        prs: repo.prs.filter((pr) => pr.merged),
-      }))
-      .filter((repo) => repo.prs.length > 0);
+    return [];
   }, []);
 
   const totalMerged = repositories.reduce(

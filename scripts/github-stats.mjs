@@ -3,7 +3,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const API_ROOT = "https://api.github.com";
-const DEFAULT_USERNAME = "ApexYash11";
+const DEFAULT_USERNAME = "Lokeshwar07-hub";
 
 // Patches merged into tiny personal or hackathon repositories read as padding
 // rather than as open source work, so only established projects are listed.
@@ -51,7 +51,7 @@ function responseError(url, response) {
 async function requestJson(fetchImpl, url, token) {
   const headers = {
     Accept: "application/vnd.github+json",
-    "User-Agent": "ApexYash11-portfolio-stats",
+    "User-Agent": "Lokeshwar07-hub-portfolio",
     "X-GitHub-Api-Version": "2022-11-28",
   };
   if (token) headers.Authorization = `Bearer ${token}`;
@@ -116,12 +116,14 @@ export function normalizeLanguages(languageBytes) {
     remainderOrder[index % remainderOrder.length].tenths += 1;
   }
 
-  return apportioned.map(({ name, bytes, tenths }) => ({
-    name,
-    bytes,
-    percentage: tenths / 10,
-    color: languageColor(name),
-  }));
+  return apportioned
+    .filter(({ tenths }) => tenths > 0)
+    .map(({ name, bytes, tenths }) => ({
+      name,
+      bytes,
+      percentage: tenths / 10,
+      color: languageColor(name),
+    }));
 }
 
 const CONTRIBUTIONS_QUERY = `
@@ -227,7 +229,7 @@ async function graphqlRequest(fetchImpl, url, token, body) {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
-      "User-Agent": "ApexYash11-portfolio-stats",
+      "User-Agent": "Lokeshwar07-hub-portfolio",
       "Content-Type": "application/json",
     },
     body: JSON.stringify(body),

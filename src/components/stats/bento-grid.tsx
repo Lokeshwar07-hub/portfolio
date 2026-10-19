@@ -1,9 +1,9 @@
+
 /* eslint-disable @next/next/no-img-element */
-import { DATA } from "@/data/resume";
-import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import snapshotJson from "@/data/github-stats.json";
-import { FileText, Sparkles } from "lucide-react";
+import { Code2 } from "lucide-react";
+
 
 interface GithubSnapshot {
   username: string;
@@ -38,6 +38,7 @@ function Heatmap({
   contributions: NonNullable<GithubSnapshot["contributions"]>;
 }) {
   const weeks = contributions.weeks.slice(-40);
+
   return (
     <div className="flex-1 min-h-0 flex items-center">
       <div
@@ -49,7 +50,10 @@ function Heatmap({
             <div
               key={`${weekIndex}-${dayIndex}`}
               title={`${day.count} contributions on ${day.date}`}
-              className={cn("aspect-square rounded-[2px]", heatmapLevel(day.count))}
+              className={cn(
+                "aspect-square rounded-[2px]",
+                heatmapLevel(day.count),
+              )}
             />
           )),
         )}
@@ -88,122 +92,141 @@ function GithubTile() {
       href={`https://github.com/${snapshot.username}`}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(tileBase, "col-span-2 row-span-2 gap-3")}
+      className={cn(tileBase, "gap-3 min-h-[280px]")}
     >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/[0.05] via-transparent to-transparent" />
+
+      {/* GitHub Profile */}
       <div className="relative flex items-center gap-3">
         <img
           src={`https://github.com/${snapshot.username}.png`}
           alt={snapshot.displayName}
           className="size-10 rounded-full ring-2 ring-border object-cover"
         />
+
         <div className="min-w-0">
           <p className="text-sm font-semibold leading-tight truncate">
             {snapshot.displayName}
           </p>
+
           <p className="text-xs text-muted-foreground truncate">
             @{snapshot.username}
           </p>
         </div>
       </div>
 
-      {contributions && <Heatmap contributions={contributions} />}
+      {/* Contribution Heatmap */}
+      {contributions ? (
+        <Heatmap contributions={contributions} />
+      ) : (
+        <div className="flex min-h-[76px] items-center justify-center rounded-md bg-foreground/[0.03] text-xs text-muted-foreground">
+          Contribution activity unavailable
+        </div>
+      )}
 
+      {/* GitHub Statistics */}
       <div className="relative grid grid-cols-2 gap-x-3 gap-y-1.5">
-        <StatDot color="#f87171" label="Stars" value={snapshot.totalStars} />
-        <StatDot color="#c084fc" label="Followers" value={snapshot.followers ?? 0} />
-        {contributions && (
-          <>
-            <StatDot
-              color="#60a5fa"
-              label="PRs"
-              value={contributions.totalPullRequests ?? 0}
-            />
-            <StatDot
-              color="#e5e7eb"
-              label="Issues"
-              value={contributions.totalIssues ?? 0}
-            />
-          </>
-        )}
+        <StatDot
+          color="#f87171"
+          label="Stars"
+          value={snapshot.totalStars}
+        />
+
+        <StatDot
+          color="#c084fc"
+          label="Followers"
+          value={snapshot.followers ?? 0}
+        />
+
+        <StatDot
+          color="#60a5fa"
+          label="PRs"
+          value={contributions?.totalPullRequests ?? 0}
+        />
+
+        <StatDot
+          color="#e5e7eb"
+          label="Issues"
+          value={contributions?.totalIssues ?? 0}
+        />
       </div>
 
+      {/* Programming Languages */}
       {snapshot.languages.length > 0 && (
         <div className="relative flex h-1.5 w-full overflow-hidden rounded-full">
-          {snapshot.languages.slice(0, 6).map((language) => (
-            <div
-              key={language.name}
-              style={{
-                width: `${language.percentage}%`,
-                backgroundColor: language.color,
-              }}
-              title={`${language.name}: ${language.percentage}%`}
-            />
-          ))}
+          {snapshot.languages
+            .filter((language) => language.percentage > 0)
+            .slice(0, 6)
+            .map((language) => (
+              <div
+                key={language.name}
+                style={{
+                  width: `${language.percentage}%`,
+                  backgroundColor: language.color,
+                }}
+                title={`${language.name}: ${language.percentage}%`}
+              />
+            ))}
         </div>
       )}
     </a>
   );
 }
 
-function SocialTile({
-  href,
-  label,
-  caption,
-  icon,
-}: {
-  href: string;
-  label: string;
-  caption: string;
-  icon: React.ReactNode;
-}) {
+function LeetCodeTile() {
   return (
     <a
-      href={href}
+      href="https://leetcode.com/u/lokeshwarrrrr/"
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(tileBase, "items-center justify-center gap-2 text-center")}
-      aria-label={label}
+      className={cn(
+        tileBase,
+        "justify-center gap-8 min-h-[280px] p-6",
+      )}
     >
-      <span className="text-muted-foreground transition-colors group-hover:text-foreground">
-        {icon}
-      </span>
-      <span className="text-xs text-muted-foreground">({caption})</span>
+      <div className="flex items-center gap-3">
+        <div className="flex size-11 items-center justify-center rounded-lg border border-border bg-background/50">
+          <Code2 className="size-5 text-primary" />
+        </div>
+
+        <div className="min-w-0">
+          <p className="text-lg font-semibold">LeetCode</p>
+          <p className="text-xs text-muted-foreground">
+            @lokeshwarrrrr
+          </p>
+        </div>
+      </div>
+
+      
+
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <p className="text-3xl font-bold tabular-nums">79</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Problems Solved
+          </p>
+        </div>
+
+        <div>
+          <p className="text-3xl font-bold tabular-nums">2.0M</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Global Rank
+          </p>
+        </div>
+      </div>
+
+      <p className="mt-auto text-xs text-muted-foreground">
+        View full LeetCode profile ↗
+      </p>
     </a>
   );
 }
 
 export default function BentoGrid() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-fr">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-stretch">
       <GithubTile />
-      <SocialTile
-        href={DATA.contact.social.LinkedIn.url}
-        label="LinkedIn"
-        caption="let's connect;"
-        icon={<Icons.linkedin className="size-5" />}
-      />
-      <SocialTile
-        href={DATA.contact.social.X.url}
-        label="X"
-        caption="hot takes"
-        icon={<Icons.x className="size-5" />}
-      />
-      <div className={cn(tileBase, "items-center justify-center gap-2 text-center")}>
-        <Sparkles className="size-5 text-primary" />
-        <span className="text-xs text-muted-foreground">
-          building agentic AI workflows
-        </span>
-      </div>
-      <a
-        href="/resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={cn(tileBase, "items-center justify-center gap-2 text-center")}
-      >
-        <FileText className="size-5 text-primary" />
-        <span className="text-xs text-muted-foreground">grab my resume</span>
-      </a>
+      <LeetCodeTile />
     </div>
   );
 }
