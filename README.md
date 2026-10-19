@@ -1,6 +1,8 @@
-# Portfolio — Yash Maheshwari
+# Portfolio — Lokeshwar Sikarwar
 
-AI/ML engineer building agentic AI systems, backend infrastructure, and production-ready RAG workflows.
+
+Computer Science student and full-stack web developer focused on building practical, modern web applications.
+
 
 Built with [Next.js](https://nextjs.org/), [shadcn/ui](https://ui.shadcn.com/), [Magic UI](https://magicui.design/), and [Tailwind CSS v4](https://tailwindcss.com/). Deployed on [Vercel](https://vercel.com).
 
